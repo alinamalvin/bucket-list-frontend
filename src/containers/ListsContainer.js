@@ -13,7 +13,7 @@ class ListsContainer extends Component {
     render() {
         return (
             <div>
-                <ListInput/>
+                <ListInput/><br></br>
                 <Lists lists={this.props.lists}/>
             </div>
         )

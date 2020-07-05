@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Lists = (props) => {
-    debugger
 
     return (
         <div>
