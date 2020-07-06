@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
+import {BrowserRouter as Router} from 'react-router-dom'
 import listReducer from './reducers/listReducer';
 
 // set up store
@@ -15,7 +16,9 @@ const store  = createStore(listReducer, composeEnhancers(applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
+    <Router>
     <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
