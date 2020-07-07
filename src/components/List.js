@@ -1,14 +1,16 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'
 
 const List = (props) => {
-    console.log(props)
 
-    let list = props.lists[props.match.params.id - 1]
+     let list = props.lists[props.match.params.id - 1]
+     console.log(list)
 
     return (
-        <div>
+        <h2>
+            {/* {list ? null : <Redirect to='/lists'/>}  */}
             {list ? list.name : null}
-        </div>
+        </h2>
     )
 }
 

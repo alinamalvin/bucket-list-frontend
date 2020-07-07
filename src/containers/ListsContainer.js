@@ -15,9 +15,9 @@ class ListsContainer extends Component {
     render() {
         return (
             <div>
-                <Route path='/lists/new' component={ListInput}/>
-                <Route path='/lists/:id' render={(routerProps) => <List {...routerProps} lists={this.props.lists}/>}/>
-                <Route exact path='/lists' render={(routerProps) => <Lists {...routerProps} lists={this.props.lists}/>}/>
+                     <Route path='/lists/new' component={ListInput}/>
+                     <Route path='/lists/:id' render={(routerProps) => <List {...routerProps} lists={this.props.lists}/>}/>
+                     <Route exact path='/lists' render={(routerProps) => <Lists {...routerProps} lists={this.props.lists}/>}/>
             </div>
         )
     }
