@@ -20,15 +20,13 @@ class CountriesSelector extends Component {
     render() { 
         return (
             <div>
-                  {/* {this.props.countries.map(country => 
-          <ul key={country.id}>{country.name}</ul>)} */}
-               {/* <ul>{this.props.countries.map(country => country.name)}</ul>  */}
-                {/* <form>
-                    <label>Choose Country:</label> */}
-                    {/* <select> 
-                        <option></option>
-                     </select> */}
-                {/* </form> */}
+                <form>
+                    <label>Choose Country:</label> 
+                    <select> 
+                    {this.props.countries.map(country => 
+                    <option key={country.id} name={country.name}>{country.name}</option>)}
+                     </select> 
+             </form> 
             </div>
         )
     }
@@ -36,7 +34,7 @@ class CountriesSelector extends Component {
 
 const mapStateToProps = state => {
     return {
-        countries: state.countries
+        countries: state.countries.countries
     }
 }
 
